@@ -5,7 +5,7 @@ import { arrow } from "../assets/icons";
 const InfoBox = ({ text, btnTxt, link }) => (
   <div className="info-box">
     <p className="sm:text-xl font-medium text-center"> {text}</p>
-    <Link to="/about" className="neo-brutalism-white neo-btn">
+    <Link to={link} className="neo-brutalism-white neo-btn">
       {btnTxt}
       <img src={arrow} className="w-4 h-4 object-contain " />
     </Link>
@@ -23,23 +23,23 @@ const infoContent = {
   ),
   2: (
     <InfoBox
-      text="worked in Transfez as Front-end Developer and willing to learn about many skills"
+      text="Embark on a Journey to Uncover the Layers of My Story – Click the Button Below to Explore More About Me"
       link="/about"
-      btnTxt="Learn more"
+      btnTxt="About Me"
     />
   ),
   3: (
     <InfoBox
-      text="Led multiple project before, curious about the impact ?"
+      text="Step into the Gallery of My Achievements – Click Below to Explore My Diverse Portfolio"
       link="/project"
       btnTxt="Visit my Portofolio"
     />
   ),
   4: (
     <InfoBox
-      text="worked in Transfez as Front-end Developer and willing to learn about many skills"
+      text="Let's Connect! Click Below to Reach Out and Start a Conversation – Visit My Contact Page on the Website."
       link="/contact"
-      btnTxt="Learn more"
+      btnTxt="Keep in Touch !"
     />
   ),
 };
