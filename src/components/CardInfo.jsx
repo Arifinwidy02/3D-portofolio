@@ -31,7 +31,7 @@ const infoContent = {
   3: (
     <InfoBox
       text="Step into the Gallery of My Achievements – Click Below to Explore My Diverse Portfolio"
-      link="/project"
+      link="/projects"
       btnTxt="Visit my Portofolio"
     />
   ),
