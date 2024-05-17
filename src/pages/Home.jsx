@@ -60,7 +60,8 @@ const Home = () => {
   return (
     <section className="relative w-full h-screen">
       <div className="flex justify-center items-center absolute top-28 left-0 right-0 z-10">
-        {Boolean(currentStage) && <CardInfo currentStage={currentStage} />}
+        {/* {Boolean(currentStage) && <CardInfo currentStage={currentStage} />} */}
+        <CardInfo currentStage={currentStage} />
       </div>
       <Canvas
         className={`w-full h-screen bg-transparent ${

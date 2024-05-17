@@ -2656,6 +2656,11 @@ sweetalert2@^11.10.1:
   resolved "https://registry.yarnpkg.com/sweetalert2/-/sweetalert2-11.10.1.tgz#783e18c90bcde72039e26e4b943573e83cf55afe"
   integrity sha512-qu145oBuFfjYr5yZW9OSdG6YmRxDf8CnkgT/sXMfrXGe+asFy2imC2vlaLQ/L/naZ/JZna1MPAY56G4qYM0VUQ==
 
+swiper@^11.1.0:
+  version "11.1.0"
+  resolved "https://registry.yarnpkg.com/swiper/-/swiper-11.1.0.tgz#3497b60d65d1320e427cdf11dfaad5c555283826"
+  integrity sha512-Pm78CgU7Wvg+w/MgIL/1NwMSLgx0XqFof25EnVyX8iZFCYJv5CppH7LHkBj43qW2k5Cp3Iz7FcdBxrox7XX2AQ==
+
 tailwindcss@^3.3.5:
   version "3.3.5"
   resolved "https://registry.npmjs.org/tailwindcss/-/tailwindcss-3.3.5.tgz"
@@ -2724,6 +2729,11 @@ three@^0.158.0:
   version "0.158.0"
   resolved "https://registry.yarnpkg.com/three/-/three-0.158.0.tgz#03ddd5b60ce9c31be8fb69f27a6d9efd49908ac3"
   integrity sha512-TALj4EOpdDPF1henk2Q+s17K61uEAAWQ7TJB68nr7FKxqwyDr3msOt5IWdbGm4TaWKjrtWS8DJJWe9JnvsWOhQ==
+
+title-case@^4.3.1:
+  version "4.3.1"
+  resolved "https://registry.yarnpkg.com/title-case/-/title-case-4.3.1.tgz#b26dab41b6ed656dffd96c64d4225ab280ceb54d"
+  integrity sha512-VnPxQ+/j0X2FZ4ceGq1oLruTLjtN5Ul4sam5ypd4mDZLm1eHwkwip1gLxqhON/j4qyTlUlfPKslE/t4NPSlxhg==
 
 to-fast-properties@^2.0.0:
   version "2.0.0"

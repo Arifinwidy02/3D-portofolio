@@ -190,6 +190,8 @@ export const projects = [
     description:
       "Dashboard to maintain the electrical motor with generate and scanning QR Code",
     link: "https://goodyear-dashboard.vercel.app/",
+    sourceVideo: "../../src/assets/video/mov-pro-simple-dashboard.mp4",
+    typeOfProject: "website",
   },
   {
     iconUrl: threads,
@@ -198,5 +200,32 @@ export const projects = [
     description:
       "App that connects you with trusted cleaners who specialize in maintaining bicycles, ensuring they stay in top condition",
     link: "https://drive.google.com/file/d/1QB7ucmXoOaX9I2W8JYiCsOyanEnipQhQ/view",
+    sourceVideo: "../../src/assets/video/recycle.mp4",
+
+    typeOfProject: "mobile",
+  },
+];
+
+export const works = [
+  {
+    iconUrl: pricewise,
+    theme: "btn-back-red",
+    name: "Transfez App",
+    description:
+      "Dashboard to maintain the electrical motor with generate and scanning QR Code",
+    link: "https://goodyear-dashboard.vercel.app/",
+    sourceVideo: "../assets/video/mov-pro-simple-dashboard.mp4",
+    typeOfProject: "front end",
+  },
+  {
+    iconUrl: threads,
+    theme: "btn-back-green",
+    name: "Bicycles Cleaning App",
+    description:
+      "App that connects you with trusted cleaners who specialize in maintaining bicycles, ensuring they stay in top condition",
+    link: "https://drive.google.com/file/d/1QB7ucmXoOaX9I2W8JYiCsOyanEnipQhQ/view",
+    sourceVideo:
+      "https://rr5---sn-npoe7nl6.c.drive.google.com/videoplayback?expire=1711566657&ei=EUUEZr_nEsi_mvUP6uWl0A4&ip=103.189.207.172&id=caaeb696adcd147b&itag=37&source=webdrive&requiressl=yes&xpc=EghonaK1InoBAQ==&mh=93&mm=32,26&mn=sn-npoe7nl6,sn-30a7ynl7&ms=su,onr&mv=m&mvi=5&pl=24&ttl=transient&susc=dr&driveid=1QB7ucmXoOaX9I2W8JYiCsOyanEnipQhQ&app=explorer&eaua=CLKd9JPh6E4&mime=video/mp4&vprv=1&prv=1&dur=85.333&lmt=1667131731364860&mt=1711555494&fvip=2&subapp=DRIVE_WEB_FILE_VIEWER&txp=0011224&sparams=expire,ei,ip,id,itag,source,requiressl,xpc,ttl,susc,driveid,app,eaua,mime,vprv,prv,dur,lmt&sig=AJfQdSswRQIgaDSn2FPJzf28SgvnDbYw5Ne1y1mcZakJcFYhTYTcoxsCIQC5MUG4JnGZOUvz2NM5wJvF2NnG_eWXmSpmTyaonf0kHA==&lsparams=mh,mm,mn,ms,mv,mvi,pl&lsig=ALClDIEwRAIgVgnCe59oQtI2JSNuyDFS3teJ55J3ugaHUPtPjWDmpw4CIBdYck1iilTopOjdP3dDTvQEwD-WfXlsrLLw9fr3eGmA&cpn=LncQrGnQqXbSpNhD&c=WEB_EMBEDDED_PLAYER&cver=1.20240320.00.00",
+    typeOfProject: "front end",
   },
 ];
