@@ -190,7 +190,7 @@ export const projects = [
     description:
       "Dashboard to maintain the electrical motor with generate and scanning QR Code",
     link: "https://goodyear-dashboard.vercel.app/",
-    sourceVideo: "../../src/assets/video/mov-pro-simple-dashboard.mp4",
+    sourceVideo: "/video/mov-pro-simple-dashboard.mp4",
     typeOfProject: "website",
   },
   {
@@ -200,7 +200,7 @@ export const projects = [
     description:
       "App that connects you with trusted cleaners who specialize in maintaining bicycles, ensuring they stay in top condition",
     link: "https://drive.google.com/file/d/1QB7ucmXoOaX9I2W8JYiCsOyanEnipQhQ/view",
-    sourceVideo: "../../src/assets/video/recycle.mp4",
+    sourceVideo: "/video/recycle.mp4",
 
     typeOfProject: "mobile",
   },
