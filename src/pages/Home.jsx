@@ -9,6 +9,7 @@ import Bird from "../models/Bird";
 import CardInfo from "../components/CardInfo";
 import sakura from "../assets/sakura.mp3";
 import { soundoff, soundon } from "../assets/icons";
+import { PiSpeakerSlashLight, PiSpeakerHighDuotone } from "react-icons/pi";
 
 const Home = () => {
   const [isRotating, setIsRotating] = useState(false);
@@ -99,12 +100,16 @@ const Home = () => {
         </Suspense>
       </Canvas>
       <div className="absolute  bottom-2 left-2">
-        <img
-          src={isPlaying ? soundon : soundoff}
-          alt="sound"
-          className="object-contain w-10 h-10 cursor-pointer"
+        <button
           onClick={() => setIsPlaying(!isPlaying)}
-        />
+          style={{ padding: 4, borderRadius: 12, backgroundColor: "#2c77e6" }}
+        >
+          {isPlaying ? (
+            <PiSpeakerHighDuotone color="white" />
+          ) : (
+            <PiSpeakerSlashLight color="white" />
+          )}
+        </button>
       </div>
     </section>
   );
