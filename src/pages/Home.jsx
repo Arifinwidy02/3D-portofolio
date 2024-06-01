@@ -17,7 +17,7 @@ const Home = () => {
   const [isPlaying, setIsPlaying] = useState(true);
 
   const audioRef = useRef(new Audio(sakura));
-  audioRef.current.volume = 0.4;
+  audioRef.current.volume = 0.2;
   audioRef.current.loop = true;
 
   const adjustIslandScren = () => {
@@ -99,10 +99,25 @@ const Home = () => {
           />
         </Suspense>
       </Canvas>
-      <div className="absolute  bottom-2 left-2">
+      <div
+        className="absolute  bottom-2 left-2"
+        style={{
+          justifyContent: "space-between",
+          flexDirection: "row",
+          display: "flex",
+          width: "97%",
+          alignItems: "flex-end",
+        }}
+      >
         <button
           onClick={() => setIsPlaying(!isPlaying)}
-          style={{ padding: 4, borderRadius: 12, backgroundColor: "#2c77e6" }}
+          style={{
+            padding: 7,
+            borderRadius: 15,
+            backgroundColor: "#2c77e6",
+            width: 30,
+            height: 30,
+          }}
         >
           {isPlaying ? (
             <PiSpeakerHighDuotone color="white" />
@@ -110,6 +125,14 @@ const Home = () => {
             <PiSpeakerSlashLight color="white" />
           )}
         </button>
+        <div>
+          <p className="font-poppins text-sm" style={{ color: "#577B8D" }}>
+            Designed by Javascript Mastery
+          </p>
+          <p className="font-poppins text-sm" style={{ color: "#577B8D" }}>
+            Built by Arifin Widyatmoko
+          </p>
+        </div>
       </div>
     </section>
   );

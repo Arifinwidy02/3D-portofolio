@@ -181,3 +181,12 @@ body:has(.card[data-color="green"]:hover) {
   box-shadow: 0.6vmin 0.6vmin #fff, 1vmin 1vmin #d2e4ff, 1vmin 1vmin #d2e4ff,
     0.65vmin 1vmin #d2e4ff, 1vmin 0.65vmin #d2e4ff;
 }
+
+.hover-fade {
+  /* background-color: rgba(255, 255, 255, 0.5); Adjust opacity as needed */
+  transition: width 0.1s ease; /* Adjust transition duration as needed */
+}
+
+.bg-blue {
+  background-color: #00215e;
+}
