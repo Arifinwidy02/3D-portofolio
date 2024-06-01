@@ -5,10 +5,7 @@ import { arrow } from "../assets/icons";
 const InfoBox = ({ text, btnTxt, link }) => (
   <div className="info-box">
     <p className="sm:text-xl font-medium text-center"> {text}</p>
-    <Link
-      to={`https://arifin-widyatmoko.netlify.app/${link}`}
-      className="neo-brutalism-white neo-btn"
-    >
+    <Link to={link} className="neo-brutalism-white neo-btn">
       <a target="_blank" href={`https://arifin-widyatmoko.netlify.app/${link}`}>
         {btnTxt}
       </a>
