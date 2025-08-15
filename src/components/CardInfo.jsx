@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { arrow } from "../assets/icons";
+import { useFluidSize } from "../hooks";
 
 const InfoBox = ({ text, btnTxt, link }) => (
   <div className="info-box">
@@ -16,7 +17,12 @@ const InfoBox = ({ text, btnTxt, link }) => (
 
 const infoContent = {
   1: (
-    <h1 className="sm:text-xl sm:leading-snug text-center neo-brutalism-blue py-4 px-8 text-white mx-5">
+    <h1
+      className="sm:text-xl sm:leading-snug text-center neo-brutalism-blue py-4 px-8 text-white mx-5"
+      style={{
+        fontSize: useFluidSize(12, 20),
+      }}
+    >
       Hi, I'am <span className="font-semibold">Arifin Widyatmoko</span>👋
       <br />A Software Engineer from Indonesia 🇮🇩
       <br />
