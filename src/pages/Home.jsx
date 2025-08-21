@@ -1,4 +1,4 @@
-import React, { Suspense, useState, useRef } from "react";
+import React, { Suspense, useState, useRef, useEffect } from "react";
 import { Canvas } from "react-three-fiber"; // old fiber version
 import Loader from "../components/Loader";
 import CardInfo from "../components/CardInfo";
@@ -8,7 +8,7 @@ import { Plane } from "../models/Plane";
 import Bird from "../models/Bird";
 import sakura from "../assets/sakura.mp3";
 import { PiSpeakerSlashLight, PiSpeakerHighDuotone } from "react-icons/pi";
-import { useFluidScale, useFluidSize, useWindowBreakpoints } from "../hooks";
+import { useFluidScale, useWindowBreakpoints } from "../hooks";
 
 // ====== CONSTANTS ======
 const ISLAND_DEFAULT_POSITION = [0, -10, -43];
@@ -24,6 +24,18 @@ export default function Home() {
   const { isPortrait } = useWindowBreakpoints();
 
   const audioRef = useRef(new Audio(sakura));
+
+  useEffect(() => {
+    const audio = audioRef.current;
+    audio.loop = true;
+    audio.volume = AUDIO_VOLUME;
+
+    if (isPlaying) {
+      audio.play().catch(() => {});
+    } else {
+      audio.pause();
+    }
+  }, [isPlaying]);
 
   // Responsive island scaling
   const islandScale = useFluidScale(
