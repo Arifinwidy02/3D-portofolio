@@ -1442,6 +1442,11 @@ flatted@^3.2.9:
   resolved "https://registry.npmjs.org/flatted/-/flatted-3.2.9.tgz"
   integrity sha512-36yxDn5H7OFZQla0/jFJmbIKTdZAQHngCedGxiMmpNfEZM0sdEeT+WczLQrjK6D7o2aiyLYDnkw0R3JK0Qv1RQ==
 
+flexivity-fluid-utils@^1.0.5:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/flexivity-fluid-utils/-/flexivity-fluid-utils-1.0.5.tgz#d8d0eb450539d28d356e77e86e3c3acb2b1b7fcd"
+  integrity sha512-kIG4tDaS4NrkVksW8YL8VSMtMm0yKae2iNavWH5cWOPCs5XOt6Kh803M75PjQ6bl3n1C1CzdyjhrVsM6iI8VXA==
+
 for-each@^0.3.3:
   version "0.3.3"
   resolved "https://registry.npmjs.org/for-each/-/for-each-0.3.3.tgz"

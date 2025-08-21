@@ -1,6 +1,14 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 
 const Navbar = () => {
+  const location = useLocation();
+  const isNotHomePage = location?.pathname !== "/";
+  const navLinkStyle = ({ isActive }) => {
+    if (isActive) return "text-blue-500 hover:bg-gray-100";
+    if (isNotHomePage)
+      return "text-black hover:bg-blue-600 hover-fade text-opacity-50";
+    return "text-white hover:bg-blue-600 hover-fade";
+  };
   return (
     <header
       className="header flex text-lg gap-7 font-medium"
@@ -16,11 +24,7 @@ const Navbar = () => {
         <NavLink
           to="/about"
           rel="noopener noreferrer"
-          className={({ isActive }) =>
-            isActive
-              ? "text-blue-500 hover:bg-gray-100"
-              : "text-white hover:bg-blue-600 hover-fade"
-          }
+          className={({ isActive }) => navLinkStyle({ isActive })}
           style={{
             paddingTop: 6,
             paddingBottom: 6,
@@ -36,11 +40,7 @@ const Navbar = () => {
         <NavLink
           to="/projects"
           rel="noopener noreferrer"
-          className={({ isActive }) =>
-            isActive
-              ? "text-blue-500 hover:bg-gray-100"
-              : "text-white hover:bg-blue-600 hover-fade"
-          }
+          className={({ isActive }) => navLinkStyle({ isActive })}
           style={{
             paddingTop: 6,
             paddingBottom: 6,

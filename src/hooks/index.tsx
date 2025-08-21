@@ -35,7 +35,7 @@ export const useResponsiveScale = (min, max, minVW = 375, maxVW = 1440) => {
   return [scale, scale, scale];
 };
 
-// ====== Island Controls (smooth mobile + desktop) ======
+// ====== Island Controls (with axis lock) ======
 export function useIslandControls(
   isRotating,
   setIsRotating,
@@ -44,6 +44,7 @@ export function useIslandControls(
 ) {
   const { gl, viewport } = useThree();
   const lastX = useRef(0);
+  const lastY = useRef(0); // 🔥 CHANGED: track Y as well
   const dragDelta = useRef(0);
   const rotationSpeed = useRef(0);
   const dampingFactor = 0.95;
@@ -53,6 +54,7 @@ export function useIslandControls(
     e.stopPropagation();
     setIsRotating(true);
     lastX.current = e.touches ? e.touches[0].clientX : e.clientX;
+    lastY.current = e.touches ? e.touches[0].clientY : e.clientY; // 🔥 CHANGED
   };
 
   // Pointer up
@@ -61,13 +63,26 @@ export function useIslandControls(
     setIsRotating(false);
   };
 
-  // Pointer move
+  // Pointer move (with axis lock)
   const handlePointerMove = (e) => {
     if (!isRotating) return;
     const clientX = e.touches ? e.touches[0].clientX : e.clientX;
-    const delta = (clientX - lastX.current) / viewport.width;
-    dragDelta.current = delta * 0.01 * Math.PI;
+    const clientY = e.touches ? e.touches[0].clientY : e.clientY; // 🔥 CHANGED
+
+    const deltaX = clientX - lastX.current; // 🔥 CHANGED
+    const deltaY = clientY - lastY.current; // 🔥 CHANGED
+
+    // 🔥 CHANGED: Axis lock logic
+    if (Math.abs(deltaY) > Math.abs(deltaX)) {
+      // More vertical movement → ignore rotation (like scroll)
+      dragDelta.current = 0;
+    } else {
+      // Horizontal movement → rotate
+      dragDelta.current = (deltaX / viewport.width) * 0.004 * Math.PI;
+    }
+
     lastX.current = clientX;
+    lastY.current = clientY; // 🔥 CHANGED
   };
 
   // Keyboard controls
